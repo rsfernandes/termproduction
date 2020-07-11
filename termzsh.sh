@@ -14,8 +14,8 @@ if [ $distri == "ubuntu" ] || [ $distri == "debian" ]
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
      sudo git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.zshrc -O ~/.zshrc
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.vimrc -O ~/.vimrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
   else
      apt install zsh -y
      apt install git -y
@@ -25,8 +25,8 @@ if [ $distri == "ubuntu" ] || [ $distri == "debian" ]
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
      git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.zshrc -O ~/.zshrc
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.vimrc -O ~/.vimrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
   fi
 elif [ $distri == "fedora" ] || [ $distri == "centos" ]
   then
@@ -41,8 +41,8 @@ elif [ $distri == "fedora" ] || [ $distri == "centos" ]
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
      sudo git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.zshrc -O ~/.zshrc
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.vimrc -O ~/.vimrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
    else
      yum zsh -y
      yum install git -y
@@ -52,7 +52,7 @@ elif [ $distri == "fedora" ] || [ $distri == "centos" ]
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
      git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.zshrc -O ~/.zshrc
-     wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.vimrc -O ~/.vimrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
+     wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
    fi  
 fi
