@@ -13,7 +13,7 @@ if [ $distri = "ubuntu" ] || [ $distri = "debian" ]
      curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     sudo git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+     sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
      zsh
@@ -25,7 +25,7 @@ if [ $distri = "ubuntu" ] || [ $distri = "debian" ]
      curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
      zsh
@@ -42,7 +42,7 @@ elif [ $distri == "fedora" ] || [ $distri == "centos" ]
      curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     sudo git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+     sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
      zsh
@@ -54,7 +54,7 @@ elif [ $distri == "fedora" ] || [ $distri == "centos" ]
      curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.zshrc -O ~/.zshrc
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
      zsh
