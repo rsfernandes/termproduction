@@ -1,6 +1,6 @@
 #!/bin/bash
-distri=`cat /etc/*release|egrep -i "ubuntu|debian|centos|red|fedora"|head -1|cut -d= -f2|tr A-Z  a-z`
-if [ $distri == "ubuntu" || $distri == "debian" ]
+distri=`cat /etc/*release|egrep -oi "ubuntu|debian|centos|red|fedora"|head -1|cut -d= -f2|tr A-Z  a-z`
+if [ $distri == "ubuntu" ] || [ $distri == "debian" ]
   then
 
  if [ $USER != "root" ]
@@ -13,7 +13,7 @@ if [ $distri == "ubuntu" || $distri == "debian" ]
      curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+     sudo git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
      wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.zshrc -O ~/.zshrc
      wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.vimrc -O ~/.vimrc
   else
@@ -28,7 +28,7 @@ if [ $distri == "ubuntu" || $distri == "debian" ]
      wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.zshrc -O ~/.zshrc
      wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.vimrc -O ~/.vimrc
   fi
-elif [ $distri == "fedora" || $distri == "centos" ]
+elif [ $distri == "fedora" ] || [ $distri == "centos" ]
   then
    if [ $USER != "root" ]
    then
@@ -40,7 +40,7 @@ elif [ $distri == "fedora" || $distri == "centos" ]
      curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
      sudo usermod --shell $(which zsh) $USER
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+     sudo git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
      wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.zshrc -O ~/.zshrc
      wget --no-check-certificate https://github.com/rsfernandes/termproduction/blob/master/.vimrc -O ~/.vimrc
    else
