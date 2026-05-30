@@ -6,6 +6,8 @@ if [ $distri = "ubuntu" ] || [ $distri = "debian" ]
  if [ $USER != "root" ]
    then
 
+     sudo apt install curl -y
+     sudo apt install terminator -y
      sudo apt install zsh -y
      sudo apt install git -y
      sudo apt install wget -y
@@ -18,9 +20,11 @@ if [ $distri = "ubuntu" ] || [ $distri = "debian" ]
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
      zsh
   else
-     apt install zsh -y
-     apt install git -y
-     apt install wget -y
+     sudo apt install curl -y
+     sudo apt install terminator -y
+     sudo apt install zsh -y
+     sudo apt install git -y
+     sudo apt install wget -y
      cd ~
      curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
      sudo usermod --shell $(which zsh) $USER
@@ -35,6 +39,8 @@ elif [ $distri == "fedora" ] || [ $distri == "centos" ]
    if [ $USER != "root" ]
    then
 
+     sudo yum install curl -y
+     sudo yum install terminator -y
      sudo yum install git -y
      sudo yum install zsh -y
      sudo yum install wget -y
@@ -47,6 +53,8 @@ elif [ $distri == "fedora" ] || [ $distri == "centos" ]
      wget --no-check-certificate https://raw.githubusercontent.com/rsfernandes/termproduction/master/.vimrc -O ~/.vimrc
      zsh
    else
+     yum install curl -y
+     yum install terminator -y
      yum zsh -y
      yum install git -y
      yum install wget -y
